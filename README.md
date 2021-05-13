@@ -240,3 +240,6 @@ flask run
   * [HTML,CSS,JavaScript](https://www.w3schools.com)
 * Backend
   * [Flask](https://flask.palletsprojects.com/en/1.1.x/)
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
