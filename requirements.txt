@@ -1,0 +1,11 @@
+pandas==1.0.1
+numpy==1.19.5
+scipy==1.4.1
+sklearn
+matplotlib==3.4.1
+Keras==2.4.3
+Flask==1.1.1
+tensorflow==2.4.1
+lightfm
+operator
+xgboost

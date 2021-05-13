@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>movielens project</title>
+  <!-- MDB icon -->
+  <link rel="icon" href="static/img/film.ico" type="image/x-icon" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" />
+  <!-- Google Fonts Roboto -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
+  <!-- MDB -->
+  <link rel="stylesheet" href="static/css/mdb.min.css" />
+</head>
+<style>
+  nav {
+    position: relative;
+    margin: 0px auto 0;
+    width: 700px;
+    height: 50px;
+    background: #fafafa;
+    border-radius: 8px;
+    font-size: 0;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .1);
+  }
+
+  nav a {
+    font-size: 15px;
+    text-transform: uppercase;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    line-height: 50px;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    text-align: center;
+  }
+
+  nav .animation {
+    position: absolute;
+    height: 100%;
+    /* height: 5px; */
+    top: 0;
+    /* bottom: 0; */
+    z-index: 0;
+    background: #236dce;
+    border-radius: 8px;
+    transition: all .5s ease 0s;
+  }
+
+  nav a:nth-child(1) {
+    width: 100px;
+  }
+
+  nav .start-home,
+  a:nth-child(1):hover~.animation {
+    width: 100px;
+    left: 0;
+  }
+
+  nav a:nth-child(2) {
+    width: 110px;
+  }
+
+  nav a:nth-child(2):hover~.animation {
+    width: 110px;
+    left: 100px;
+  }
+
+  nav a:nth-child(3) {
+    width: 120px;
+  }
+
+  nav a:nth-child(3):hover~.animation {
+    width: 120px;
+    left: 210px;
+  }
+
+  nav a:nth-child(4) {
+    width: 140px;
+  }
+
+  nav a:nth-child(4):hover~.animation {
+    width: 140px;
+    left: 330px;
+  }
+
+  nav a:nth-child(5) {
+    width: 100px;
+  }
+
+  nav a:nth-child(5):hover~.animation {
+    width: 100px;
+    left: 470px;
+  }
+
+  nav a:nth-child(6) {
+    width: 120px;
+  }
+
+  nav a:nth-child(6):hover~.animation {
+    width: 120px;
+    left: 580px;
+  }
+</style>
+</style>
+
+<body>
+
+  <nav class="conteniar">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#info">Information</a>
+    <a href="#predict">Prediction</a>
+    <a href="#result">Result</a>
+    <a href="#post">Posters</a>
+    <div class="animation start-home"></div>
+  </nav>
+  <!-- Jumbotron -->
+  <div class="jumbotron text-center" style="margin-bottom:20px ;" id="home">
+    <!-- Card image -->
+    <div class="view overlay my-4">
+      <img src="static/img/14.jpg" class="img-fluid" alt="">
+      <a href="#">
+        <div class="mask rgba-white-slight"></div>
+      </a>
+    </div>
+    <h5 class="indigo-text h5 mb-4" id="about">About</h5>
+    <p class="card-text">As part of our graduation project, we developed a recommender system algorithm using various
+      deep learning algorithms on the MovieLens1M data set with our team of 4 people, <br>
+      which we established as Atılım University Information Systems engineering and computer engineering students. <br>
+      We used various models to get accurate results in our project. <br>
+      These models are Matrix Factorization, Neural Collaborative Filtering and Neural Network. <br>
+      You can see our model below.</p>
+    <div class="container">
+      <div class="card-group">
+        <div class="card">
+          <img src="static/img/ali.jpg" class="card-img-top" alt="ali" />
+          <div class="card-body">
+            <h5 class="card-title">Yusuf Ali Koyuncu</h5>
+            <p class="card-text">
+              Contact Link:
+            </p>
+            <a class="fa-lg p-2 m-2 li-ic" type="button" role="button"
+              href="https://www.linkedin.com/in/yusuf-ali-koyuncu/" target="_blank"><i
+                class="fab fa-linkedin-in grey-text"></i></a>
+            <a class="btn-floating btn-lg btn-git" type="button" role="button" href="https://github.com/JimySheepman"
+              target="_blank"><i class="fab fa-github"></i></a>
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="static/img/betul.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">Hatice Betül Kaya</h5>
+            <p class="card-text">
+              Contact Link:
+            </p>
+            <p class="card-text">
+              <a class="fa-lg p-2 m-2 li-ic" type="button" role="button"
+                href="https://www.linkedin.com/in/hatice-betul-kaya/" target="_blank"><i
+                  class="fab fa-linkedin-in grey-text"></i></a>
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="static/img/hilal.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">Hilal Koçer</h5>
+            <p class="card-text">
+              Contact Link:
+            </p>
+            <p class="card-text">
+              <a class="fa-lg p-2 m-2 li-ic" type="button" role="button"
+                href="https://www.linkedin.com/in/hilal-ko%C3%A7er-645898181/" target="_blank"><i
+                  class="fab fa-linkedin-in grey-text"></i></a>
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="static/img/onur.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">Onur Ekincioğlu</h5>
+            <p class="card-text">
+              Contact Link:
+            </p>
+            <p class="card-text">
+              <a class="fa-lg p-2 m-2 li-ic" type="button" role="button"
+                href="https://www.linkedin.com/in/onur-ekincioğlu-a94a99211/" target="_blank"><i
+                  class="fab fa-linkedin-in grey-text"></i></a>
+              <a class="btn-floating btn-lg btn-git" type="button" role="button" href="https://github.com/OEK-71"
+                target="_blank"><i class="fab fa-github"></i></a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <hr>
+  </div>
+  <!-- Jumbotron -->
+  <div class="jumbotron text-center">
+    <div class="jumbotron jumbotron-fluid" style="margin-bottom:20px ;">
+      <div class="container">
+        <h2 class="display-4" id="info">Dataset Summery</h2>
+        <p class="lead">MovieLens data sets were collected by the GroupLens Research Project
+          at the University of Minnesota.<br>
+          This data set consists of:<br>
+          This data set includes 1,048,575 anonymous ratings of 14,026 movies in about 20 genres <br> made by 7,120
+          MovieLens users who joined MovieLens in 2000.
+        </p>
+      </div>
+    </div>
+    <div class="jumbotron jumbotron-fluid" style="margin-bottom:20px ;">
+      <div class="container">
+        <h2 class="display-4">Matrix Factorization Model</h2>
+        <p class="lead">Matrix factorization is one of the popular techniques of collaborative filtering algorithms used
+          in recommender systems.
+          Matrix factorization algorithms work by decomposing the user-item interaction matrix into the product of two
+          lower dimensionality rectangular matrices.
+          The idea behind matrix factorization is to perform users and items in a lower-dimensional latent space.
+          The prediction results can be developed by assigning different weights to the latent factors based on items'
+          popularity and users' activeness.</p>
+        <div class="card" style="width: 18rem; margin-right: auto; margin-left: auto;">
+          <img src="static/img/1.png" class="card-img-top" alt="1" />
+          <div class="card-body">
+            <p class="card-text">
+              Measures<br>
+              <hr>
+              RMSE= 0.8593<br>
+              MAE= 0.6430<br>
+              Accuracy= % 78.19<br>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="jumbotron jumbotron-fluid" style="margin-bottom:20px ;">
+      <div class="container">
+        <h2 class="display-4">Neural Network Model</h2>
+        <p class="lead">Neural network is a type of machine learning that models itself after the human brain, creating
+          an artificial neural network that allows the computer to learn by adding new data through an algorithm.
+          Although the basic unit of the brain is neurons, the basic building block of an artificial neural network is a
+          sensor that performs simple signal processing and they are then connected to a large network.
+          The computer with the neural network is taught to perform a task by having the pre-tagged training samples
+          analyzed.
+          A common example of a neural network using deep learning is an object recognition where the neural network is
+          presented with a large number of objects of a certain type, such as a cat or a computer.
+          Learns how to categorize new images by analyzing repetitive patterns in the presented images.</p>
+        <div class="card" style="width: 18rem; margin-right: auto; margin-left: auto;">
+          <img src="static/img/2.png" class="card-img-top" alt="2" />
+          <div class="card-body">
+            <p class="card-text">
+              Measures<br>
+              <hr>
+              RMSE= 0.8923<br>
+              MAE= 0.6409<br>
+              Accuracy= % 78.2<br>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="jumbotron jumbotron-fluid" style="margin-bottom:20px ;">
+      <div class="container">
+        <h2 class="display-4">Neural Collaborative Filtering Model</h2>
+        <p class="lead">Neural Collaborative Filtering(NCF) replaces the user-item inner product with a neural
+          architecture.
+          By doing so NCF tried to achieve the following:
+          NCF tries to express and generalize MF under its framework.
+          NCF tries to learn User-item interactions through a multi-layer perceptron.
+          Neural collaborative filtering framework is worked with implicit feedback.
+        </p>
+        <div class="card" style="width: 18rem; margin-right: auto; margin-left: auto;">
+          <img src="static/img/3.png" class="card-img-top" alt="3" />
+          <div class="card-body">
+            <p class="card-text">
+              Measures<br>
+              <hr>
+              RMSE= 0.8464<br>
+              MAE= 0.6409<br>
+              Accuracy= % 78.37<br>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <form method="POST">
+    <div class="container" style="width: 100%;margin-right: 300px; margin-left: auto; margin-bottom:20px;">
+      <div class="d-grid gap-2 col-4 mx-auto">
+        <h4 class="card-title h5 pb-2" style="margin-left: auto;margin-right: auto; text-transform: uppercase;"
+          id="predict">
+          <strong>Select your model for top 10 prediction</strong>
+        </h4>
+      </div>
+    </div>
+    <div class="container" style="margin-bottom:40px;">
+      <div style="width: 40%;margin-right: auto; margin-left: auto; margin-bottom:20px;">
+        <div class="form-outline">
+          <input type="number" min="0" max="7120" name="nm"
+            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+            maxlength="4" id="formTextExample1" class="form-control" aria-describedby="textExample1" />
+          <label class="form-label" for="formTextExample1">User Id</label>
+        </div>
+        <div id="textExample1" class="form-text">
+          Enter the user Id you want to search.
+        </div>
+        <hr>
+        <select class="form-select" aria-label="Default select example" name="select">
+          <option selected value="0">Open this select menu</option>
+          <option value="1">Matrix Factorization Model</option>
+          <option value="2">Neural Network Model</option>
+          <option value="3">Neural Collaborative Filtering Model</option>
+        </select>
+        <div id="textExample1" class="form-text">
+          Select the model you want to search.
+        </div>
+        <hr>
+      </div>
+    </div>
+    <div class="container" style="width: 100%;margin-right: auto; margin-left: auto; margin-bottom:20px;">
+      <div class="d-grid gap-2 col-4 mx-auto">
+        <button class="btn btn-primary" type="submit" value="submit" name="bttn3" onclick="foo()">Top 10
+          Prediction</button>
+      </div>
+    </div>
+  </form>
+  <script>
+    function foo() {
+      confirm("Top 10 list is being created. This process may take time!!!");
+      return true;
+    }
+  </script>
+  <div class="container" style="width: 100%;margin-right: auto; margin-left: auto; margin-bottom:20px;">
+    <div class="container" style="width: 100%;margin-right: 300px; margin-left: auto; margin-bottom:20px;">
+      <div class="d-grid gap-2 col-4 mx-auto">
+        <h4 class="card-title h5 pb-2" style="margin-left: auto;margin-right: auto; text-transform: uppercase;"
+          id="result">
+          <strong>Model Results</strong>
+        </h4>
+      </div>
+    </div>
+    <table class="table">
+      <tbody>
+        {% for res in result %}
+        <tr>
+          <th scope="row">{{ result.index(res)+1 }}</th>
+          <td>{{res}}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  <div class="container" style="width: 100%;margin-right: auto; margin-left: auto; margin-bottom:20px;">
+    <hr>
+    <div class="container" style="margin-bottom:40px;">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col"> {{ 'id: {}'.format(user)}}</th>
+            {% for head in headers %}
+            <th scope="col">{{head}}</th>
+            {% endfor %}
+          </tr>
+        </thead>
+        <tbody>
+          {% for lst in top10 %}
+          <tr>
+            <th scope="row">{{ top10.index(lst)+1 }}</th>
+            {% for top in lst %}
+            <td>{{top}}</td>
+            {% endfor %}
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+  </div>
+  <div class="container" style="margin-bottom:40px;" id="post">
+    <div class="container" style="margin-bottom:40px;">
+      <div class="row row-cols-1 row-cols-md-2 g-4">
+        {% for url in url_list %}
+        <div class="col">
+          <div class="card">
+            <img src="{{url}}" class="rounded mx-auto d-block" alt="link is crush!" />
+            <div class="card-body">
+              <h5 class="card-title">{{title_list[url_list.index(url)]}}</h5>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  <!-- Footer -->
+  <footer class="bg-dark text-center text-white">
+    <!-- Grid container -->
+    <div class="container p-4">
+      <!-- Section: Social media -->
+      <section class="mb-4">
+        <!-- Google -->
+        <a class="btn btn-outline-light btn-floating m-1" href="mailto:y.alikoyuncu@gmail.com" role="button"
+          target="_blank"><i class="fab fa-google"></i></a>
+        <!-- Instagram -->
+        <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/yusufalikync/" role="button"
+          target="_blank"><i class="fab fa-instagram"></i></a>
+        <!-- Linkedin -->
+        <a class="btn btn-outline-light btn-floating m-1" href="https://www.linkedin.com/in/yusuf-ali-koyuncu/"
+          role="button" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <!-- Github -->
+        <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/JimySheepman" role="button"
+          target="_blank"><i class="fab fa-github"></i></a>
+      </section>
+      <!-- Section: Social media -->
+      <!-- Section: Form -->
+      <section class="">
+        <form action="">
+        </form>
+      </section>
+      <section class="mb-4">
+        <p>
+          You Learn More From Failure Than From Success. Don’t Let It Stop You. Failure Builds Character.
+        </p>
+      </section>
+      <!-- Section: Text -->
+      <!-- Section: Links -->
+      <section class="">
+        <!--Grid row-->
+        <!--Grid row-->
+      </section>
+      <!-- Section: Links -->
+    </div>
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2020 Copyright:
+      <a class="text-white">Created by merlins </a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
+  <!-- End your project here-->
+  <!-- MDB -->
+  <script type="text/javascript" src="static/js/mdb.min.js"></script>
+  <!-- Custom scripts -->
+  <script type="text/javascript"></script>
+</body>
+</html>
