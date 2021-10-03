@@ -224,6 +224,17 @@ set FLASK_APP=main.py
 set FLASK_APP=development
 flask run
 ```
+# Docker 
+Building Dockerfile
+
+```
+$ docker build -t recomendation:1.0 .
+```
+Running Docker image
+```
+$ docker run -p 5000:5000 recomendation:1.0
+```
+Now, the application should be accessible http://0.0.0.0:5000/
 
 # Development
 
